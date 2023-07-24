@@ -1,0 +1,32 @@
+@server = http://localhost:8080
+###
+GET {{server}}
+###
+GET  {{server}}/cursos
+###
+GET {{server}}/cursos/2
+##
+GET {{server}}/cursos?size=2
+###
+GET {{server}}/cursos?sort=nombre,desc
+###
+GET {{server}}/cursos?sort=nombre,asc
+###
+GET {{server}}/cursos?sort=creditos,asc
+###
+GET {{server}}/cursos?sort=creditos,desc
+###
+POST {{server}}/cursos
+Content-Type: application/json
+
+{"nombre": "aracnios", "creditos": 8}
+###
+DELETE {{server}}/cursos/1
+###
+PATCH {{server}}/cursos/2
+Content-Type: application/json
+
+{"creditos": 1}
+###
+GET {{server}}/profile/cursos
+###
