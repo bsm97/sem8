@@ -1,0 +1,20 @@
+@server = http://localhost:8080
+@apiserver = {{server}}/api/curso
+###
+GET {{server}}/
+###
+GET {{server}}/codigo
+###
+GET {{server}}/nombre-completo
+###
+GET {{apiserver}}/listar
+###
+POST  {{apiserver}}/nuevo
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Algoritmos&creditos=3
+###
+DELETE  {{apiserver}}/eliminar
+Content-Type: application/x-www-form-urlencoded
+
+id=1
